@@ -1,0 +1,942 @@
+
+/* Start Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-family: "Josefin Sans", serif;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container,
+.container2,
+.container4,
+.container5,
+.container6,
+.container7,
+.container8,
+.container9 {
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start Navbar */
+
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 10;
+}
+
+nav .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+nav .Image {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+nav .information ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav .information ul li {
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+nav .information ul li a {
+    color: #141517;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav .information ul li a:hover {
+    color: #ff003c;
+}
+
+nav .Icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+nav .Icons a img {
+    width: 17px !important;
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    nav .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav .Image {
+        margin-right: auto;
+    }
+
+    nav .Icons {
+        margin-left: auto;
+    }
+
+    nav .information {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    nav .information ul {
+        justify-content: flex-start;
+        gap: 25px;
+        width: max-content;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav .container {
+        width: 92%;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    nav .Image {
+        width: 85px;
+    }
+
+    nav .information {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    nav .information::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav .information ul {
+        justify-content: flex-start;
+        gap: 25px;
+        width: max-content;
+    }
+
+    nav .information ul li a {
+        font-size: 14px;
+    }
+
+    nav .Icons {
+        gap: 18px;
+    }
+}
+
+
+/* End Navbar */
+
+/* Start Home */
+.Home {
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 650px;
+}
+
+section .container .text {
+    width: 65%;
+    padding-left: 40px;
+}
+
+section .container .text h1 {
+    color: #0b1c39;
+    font-size: clamp(45px, 7vw, 100px);
+    margin-bottom: 20px;
+}
+
+section .container .text p {
+    color: #212529;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+section .container .text button {
+    border: none;
+    padding: 12px 30px;
+    color: white;
+    background-color: #4a4a4b;
+    font-size: 22px;
+    font-family: "Josefin Sans", serif;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+section .container .text button::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #ff003c;
+    z-index: -1;
+}
+
+section .container .text button:hover::before {
+    width: 100%;
+}
+
+section .container .Image {
+    width: 35%;
+    animation: tasneem 2s infinite alternate;
+}
+
+@keyframes tasneem {
+    to {
+        transform: scale(1.03);
+    }
+}
+
+/* End Home */
+
+/* Start New Arrivals */
+section .container2 h2 {
+    margin: 100px 0 40px;
+    font-size: 48px;
+}
+
+section .container2 .Boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+section .container2 .Boxes .box1 {
+    flex: 1;
+    min-width: 0;
+}
+
+section .container2 .Boxes .box1 .image {
+    overflow: hidden;
+}
+
+section .container2 .Boxes .box1 .image img {
+    transition: 0.3s;
+}
+
+section .container2 .Boxes .box1 .image img:hover {
+    transform: scale(1.1);
+}
+
+section .container2 .Boxes .box1 .text h5 {
+    margin: 15px 0;
+    color: #444444;
+    font-size: 24px;
+}
+
+section .container2 .Boxes .box1 .text p {
+    margin-top: 15px;
+    color: #ff003c;
+    font-size: 18px;
+}
+
+/* End New Arrivals */
+
+/* Start Gallery */
+.Gallery {
+    display: flex;
+    gap: 25px;
+    margin: 100px 0;
+    overflow: hidden;
+}
+
+.Gallery .left {
+    width: 50%;
+}
+
+.Gallery .right {
+    width: 50%;
+    display: flex;
+    gap: 25px;
+}
+
+.Gallery .right .box {
+    width: 50%;
+}
+
+.Gallery .right .box.second {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Gallery .Image {
+    overflow: hidden;
+}
+
+.Gallery .Image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.Gallery .Image:hover img {
+    transform: scale(1.05);
+}
+
+.Gallery .right .box.second .Image {
+    flex: 1;
+    min-height: 0;
+}
+
+/* End Gallery */
+
+/* Start Popular Items */
+section .container4 .text1 {
+    text-align: center;
+    width: 45%;
+    margin: 80px auto 40px;
+}
+
+section .container4 .text1 h3 {
+    color: #0b1c39;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+section .container4 .text1 p {
+    font-size: 16px;
+    color: #999;
+    line-height: 25px;
+}
+
+section .container4 .Boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+section .container4 .Boxes .box1 {
+    width: calc(33.333% - 25px);
+}
+
+section .container4 .Boxes .box1 .image {
+    position: relative;
+    overflow: hidden;
+}
+
+section .container4 .Boxes .box1 .image::before {
+    border: 2px solid #ff003c;
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+section .container4 .Boxes .box1 .image .button button {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #ff003c;
+    padding: 20px;
+    bottom: -16%;
+    color: white;
+    font-size: 16px;
+    transition: 0.5s;
+    opacity: 0;
+    border: 0;
+}
+
+section .container4 .Boxes .box1:hover .image .button button {
+    opacity: 1;
+    bottom: 0;
+}
+
+section .container4 .Boxes .box1 .image .icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
+    color: #444;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+section .container4 .Boxes .box1:hover .image .icon {
+    opacity: 1;
+}
+
+section .container4 .Boxes .box1 .text {
+    text-align: center;
+    color: #212529;
+    font-size: 18px;
+}
+
+section .container4 .Boxes .box1 .text h5 {
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+section .container4 .btn {
+    display: block;
+    border: none;
+    padding: 15px 30px;
+    background-color: #ff003c;
+    color: white;
+    font-family: "Josefin Sans", serif;
+    margin: 70px auto 120px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+section .container4 .btn::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4a4a4b;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+section .container4 .btn:hover::before {
+    width: 100%;
+}
+
+/* End Popular Items */
+
+/* Start Watch Choice */
+section .container5,
+section .container6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+section .container5 .text2,
+section .container6 .text2 {
+    width: 50%;
+}
+
+section .container5 .text2 h2,
+section .container6 .text2 h2 {
+    font-size: 54px;
+}
+
+section .container5 .text2 p,
+section .container6 .text2 p {
+    line-height: 25px;
+    margin: 35px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+section .container5 .image,
+section .container6 .image {
+    width: 45%;
+}
+
+section .container5 .text2 button,
+section .container6 .text2 button {
+    border: none;
+    padding: 15px 30px;
+    background-color: #ff003c;
+    color: white;
+    font-family: "Josefin Sans", serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 16px;
+}
+
+section .container5 .text2 button::before,
+section .container6 .text2 button::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4a4a4b;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+section .container5 .text2 button:hover::before,
+section .container6 .text2 button:hover::before {
+    width: 100%;
+}
+
+section .container6 {
+    margin-bottom: 150px;
+}
+
+/* End Watch Choice */
+
+/* Start Services */
+section .container7 .boxes {
+    background-color: #ff003c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 120px;
+}
+
+section .container7 .boxes .box {
+    padding: 40px;
+    flex: 1;
+}
+
+section .container7 .boxes .box i {
+    font-size: 34px;
+}
+
+section .container7 .boxes .box h5 {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+section .container7 .boxes .box p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* End Services */
+
+/* Start Footer */
+footer .container8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+footer .container8 .box.box1 .image img {
+    width: 100px;
+}
+
+footer .container8 .box p {
+    line-height: 25px;
+    color: #999999;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+footer .container8 .box ul span {
+    display: block;
+    color: #212529;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .container8 .box ul li {
+    color: #999999;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+footer .container8 .box {
+    flex: 1;
+    min-width: 0;
+}
+
+footer .container9 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+footer .container9 p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #999999;
+    line-height: 25px;
+}
+
+footer .container9 p span {
+    color: #ff003c;
+}
+
+footer .container9 .ul ul {
+    display: flex;
+    align-items: center;
+}
+
+footer .container9 .ul ul li {
+    margin: 10px;
+}
+
+footer .container9 .ul ul li i {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+footer .container9 .ul ul li:hover i {
+    transform: rotateY(180deg);
+    color: #ff003c;
+}
+
+/* End Footer */
+
+/* =========================
+   Tablet Responsive
+========================= */
+@media (max-width: 992px) {
+
+    nav .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav .information ul li {
+        padding: 10px;
+    }
+
+    section .container {
+        min-height: 500px;
+    }
+
+    section .container .text {
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    section .container .Image {
+        width: 40%;
+    }
+
+    section .container .text h1 {
+        font-size: 55px;
+    }
+
+    section .container2 h2 {
+        font-size: 38px;
+    }
+
+    .Gallery {
+        gap: 15px;
+    }
+
+    .Gallery .right {
+        gap: 15px;
+    }
+
+    section .container4 .text1 {
+        width: 70%;
+    }
+
+    section .container4 .Boxes .box1 {
+        width: calc(50% - 20px);
+    }
+
+    section .container5 .text2 h2,
+    section .container6 .text2 h2 {
+        font-size: 40px;
+    }
+
+    section .container7 .boxes .box {
+        padding: 25px;
+    }
+
+    footer .container8 {
+        flex-wrap: wrap;
+    }
+
+    footer .container8 .box {
+        flex: 1 1 40%;
+    }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 768px) {
+
+    nav .container {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    nav .information ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav .information ul li {
+        padding: 8px;
+    }
+
+    nav .Icons a img {
+        margin: 10px 15px;
+    }
+
+    section .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 0;
+        min-height: auto;
+    }
+
+    section .container .text {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    section .container .text h1 {
+        font-size: 45px;
+    }
+
+    section .container .text p {
+        font-size: 14px;
+    }
+
+    section .container .Image {
+        width: 65%;
+        margin-top: 30px;
+    }
+
+    section .container2 h2 {
+        margin: 60px 0 30px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 34px;
+    }
+
+    section .container2 .Boxes {
+        flex-wrap: wrap;
+    }
+
+    section .container2 .Boxes .box1 {
+        flex: 1 1 45%;
+    }
+
+    .Gallery {
+        flex-direction: column;
+        margin: 60px 0;
+    }
+
+    .Gallery .left,
+    .Gallery .right {
+        width: 100%;
+    }
+
+    .Gallery .right {
+        gap: 15px;
+    }
+
+    .Gallery .right .box {
+        width: 50%;
+    }
+
+    section .container4 .text1 {
+        width: 90%;
+    }
+
+    section .container4 .text1 h3 {
+        font-size: 36px;
+    }
+
+    section .container4 .Boxes {
+        gap: 15px;
+    }
+
+    section .container4 .Boxes .box1 {
+        width: calc(50% - 10px);
+    }
+
+    section .container4 .Boxes .box1 .text h5 {
+        font-size: 18px;
+    }
+
+    section .container4 .btn {
+        margin: 50px auto 80px;
+    }
+
+    section .container5,
+    section .container6 {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    section .container5 .text2,
+    section .container6 .text2 {
+        width: 100%;
+    }
+
+    section .container5 .image,
+    section .container6 .image {
+        width: 80%;
+    }
+
+    section .container5 .text2 h2,
+    section .container6 .text2 h2 {
+        font-size: 38px;
+    }
+
+    section .container5 .text2 p,
+    section .container6 .text2 p {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    section .container7 .boxes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section .container7 .boxes .box {
+        width: 100%;
+        padding: 30px;
+    }
+
+    footer .container8 {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    footer .container8 .box {
+        width: 100%;
+    }
+
+    footer .container9 {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-top: 60px;
+    }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+@media (max-width: 480px) {
+
+    nav .information ul li {
+        padding: 6px;
+    }
+
+    nav .information ul li a {
+        font-size: 13px;
+    }
+
+    section .container .text h1 {
+        font-size: 36px;
+    }
+
+    section .container .Image {
+        width: 85%;
+    }
+
+    section .container2 h2 {
+        font-size: 30px;
+    }
+
+    section .container2 .Boxes {
+        flex-direction: column;
+    }
+
+    section .container2 .Boxes .box1 {
+        width: 100%;
+    }
+
+    .Gallery .right {
+        flex-direction: column;
+    }
+
+    .Gallery .right .box {
+        width: 100%;
+    }
+
+    .Gallery .right .box.second .Image {
+        margin-bottom: 15px;
+    }
+
+    section .container4 .text1 h3 {
+        font-size: 30px;
+    }
+
+    section .container4 .Boxes .box1 {
+        width: 100%;
+    }
+
+    section .container5 .text2 h2,
+    section .container6 .text2 h2 {
+        font-size: 32px;
+    }
+
+    section .container5 .image,
+    section .container6 .image {
+        width: 100%;
+    }
+
+    section .container7 .boxes .box {
+        padding: 25px 20px;
+    }
+
+    footer .container9 p {
+        font-size: 14px;
+    }
+}
